@@ -6,7 +6,7 @@ namespace ExportParser.Tinkoff
     public static class Parser
     {
         private static string _pageHeader = "Дата проводки Код операции Описание Сумма  в валюте счета";
-        private static Regex _alfaLine = new Regex(@"(?<sum>-[0-9 ]+,\d{2} RUR)");
+        private static Regex _tinkoffLine = new Regex(@"(?<sum>-[0-9 ]+,\d{2} RUR)");
         private static Regex _dateLine = new Regex(@"(?<date>\d{2}\.\d{2}\.\d{2,4}),");
         private static Regex _dateLine2 = new Regex(@"(?<date>\d{2}\.\d{2}\.\d{4})");
         private static Regex _sumLine = new Regex(@"(?<sum>-(\s*[0-9]+)+\,\d{2}) RUR$");
@@ -37,7 +37,7 @@ namespace ExportParser.Tinkoff
 
         private static string[] ReadAllLines(string rawText)
         {
-            var lines = _alfaLine.Split(rawText);
+            var lines = _tinkoffLine.Split(rawText);
             return lines
                 .Select((x, i) => $"{x}{lines.ElementAtOrDefault(i + 1)}")
                 .Where((_, i) => i % 2 == 0)

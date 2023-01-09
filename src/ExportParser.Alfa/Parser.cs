@@ -1,9 +1,6 @@
 ﻿using ExportParser.Common;
-using PdfSharp.Pdf.IO;
 using System;
-using System.IO;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
 
 namespace ExportParser.Alfa
