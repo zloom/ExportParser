@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="mcc_codes.csv" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="mcc_codes.csv" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="PdfSharpTextExtractor" Version="1.0.2" />
+  </ItemGroup>
+
+</Project>
