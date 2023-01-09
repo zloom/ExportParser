@@ -1,2 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿
+ExportParser.Common.InputOutput.ConvertPDFToCSV(ExportParser.Alfa.Parser.Parse, "");
+ExportParser.Common.InputOutput.ConvertPDFToCSV(ExportParser.Tinkoff.Parser.Parse, "");
+
 Console.WriteLine("Hello, World!");

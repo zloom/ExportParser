@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportParser.Tinkoff", "Exp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportParser.Converter", "ExportParser.Converter\ExportParser.Converter.csproj", "{9CF608C9-1D8B-48CC-9D45-F2F382E77D38}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{3E04D2F2-46AC-448F-B90C-23B3186A7875}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +38,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{984AD1D6-222C-4452-AA44-DB3C3884F885} = {3E04D2F2-46AC-448F-B90C-23B3186A7875}
+		{22E44289-E428-426F-8053-7AD32320CCCB} = {3E04D2F2-46AC-448F-B90C-23B3186A7875}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C060D9B8-5279-42E5-924D-6C9083EDC706}
