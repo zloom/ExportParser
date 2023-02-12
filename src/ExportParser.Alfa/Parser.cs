@@ -63,7 +63,7 @@ namespace ExportParser.Alfa
                     addr: _descrLine.Match(s).Groups["addr"].Value,
                     mcc: _descrLine.Match(s).Groups["mcc"].Value)
                 )
-                .Select(s => new Entry(TryDate(s.date), TrySum(s.sum), s.addr, MCC.Codes.TryGet(s.mcc), Bank.Alafa))
+                .Select(s => new Entry(TryDate(s.date), TrySum(s.sum), s.addr, MCC.Codes.TryGet(s.mcc), Bank.Alfa))
                 .OrderBy(s => s.date)
                 .ThenBy(s => s.sum)
                 .ToArray();

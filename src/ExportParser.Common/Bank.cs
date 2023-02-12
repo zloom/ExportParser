@@ -2,6 +2,6 @@
 {
     public enum Bank
     {
-        Alafa, Tinkoff
+        Alfa, Tinkoff
     }
 }

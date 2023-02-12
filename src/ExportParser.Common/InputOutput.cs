@@ -7,7 +7,7 @@ namespace ExportParser.Common
 {
     public static class InputOutput 
     {
-        private static string _csvSeparator = ",";
+        private static string _csvSeparator = ";";
 
         public static string PdfSharpReader(string filePath)
         {

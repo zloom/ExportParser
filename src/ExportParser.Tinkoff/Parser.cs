@@ -11,7 +11,6 @@ namespace ExportParser.Tinkoff
         private static Regex _dateLine2 = new Regex(@"(?<date>\d{2}\.\d{2}\.\d{4})");
         private static Regex _sumLine = new Regex(@"(?<sum>-(\s*[0-9]+)+\,\d{2}) RUR$");
         private static Regex _descrLine = new Regex(@"место совершения операции:\s+(?<addr>\d*.*)MCC(?<mcc>\d{4})");
-        private static Regex _textLine = new Regex("\"(?<mcc>\\d{4})\",\"(?<text>.*)\",\"");
 
         private static string MatchOr(this Regex first, Regex second, string value)
         {
@@ -61,7 +60,7 @@ namespace ExportParser.Tinkoff
                     addr: _descrLine.Match(s).Groups["addr"].Value,
                     mcc: _descrLine.Match(s).Groups["mcc"].Value)
                 )
-                .Select(s => new Entry(TryDate(s.date), TrySum(s.sum), s.addr, MCC.Codes.TryGet(s.mcc), Bank.Alafa))
+                .Select(s => new Entry(TryDate(s.date), TrySum(s.sum), s.addr, MCC.Codes.TryGet(s.mcc), Bank.Tinkoff))
                 .OrderBy(s => s.date)
                 .ThenBy(s => s.sum)
                 .ToArray();
